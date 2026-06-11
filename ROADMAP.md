@@ -11,7 +11,7 @@ Guiding rule: the success metric is "I actually use this for my own garden."
 
 ## 🔨 Phase 2 — The App (Next.js + Supabase)
 - [x] Next.js project scaffold (App Router, TypeScript) — done June 10, 2026
-- [ ] Supabase: `gardens`, `beds`, `crops`, `plantings` tables
+- [x] Supabase: `gardens`, `beds`, `crops`, `plantings` tables — done June 10, 2026
       (migrate the hardcoded JSON + CROPS dict into real schema)
 - [ ] Garden setup form (location, beds, crops, irrigation)
 - [ ] "Today's Brief" page — server-side: fetch weather → call Claude → render
@@ -61,7 +61,7 @@ Phase 2 scaffold complete:
 - Scaffolded Next.js 15 (App Router, TypeScript, Tailwind, ESLint, src/ dir)
 - Confirmed dev server running at localhost:3000
 
-**Next session:** Set up Supabase project + schema (`gardens`, `beds`, `crops`, `plantings`), then migrate hardcoded garden profile data.
+**Next session:** Build garden setup form + "Today's Brief" page (weather → Claude → render).
 
 ## Need-to-knows (gotchas captured along the way)
 - ⚠️ **iCloud:** repo currently in ~/Documents which syncs to iCloud. Move to
