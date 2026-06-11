@@ -3,7 +3,7 @@
 Built in evening sessions. Each phase ships something usable before the next begins.
 Guiding rule: the success metric is "I actually use this for my own garden."
 
-## ✅ Phase 1 — The Brain (CLI)
+## ✅ Phase 1 — The Brain (CLI) — DONE June 10, 2026
 - [x] Pull 7-day forecast from Open-Meteo (temps, ET₀, UV, wind, precip)
 - [x] Hardcoded garden profile (3 raised beds, 9 crops) + structured crop
       heat-tolerance table
@@ -38,3 +38,30 @@ Guiding rule: the success metric is "I actually use this for my own garden."
 - Secrets live in `.env` (gitignored). Never commit keys.
 - Commit at the end of every session with a message describing what changed —
   the git log is the project journal.
+
+---
+
+## Session log
+
+### Session 1 — June 10, 2026 ✅
+Phase 1 complete in one evening:
+- Wrote `garden_brief.py` (Open-Meteo + garden profile + CROPS table + Claude API)
+- Created public GitHub repo (MIT, Node .gitignore), wrote README + ROADMAP
+- Set up git auth (personal access token), made first commits and pushed
+- Forecast validation: real 103.5°F spike detected for June 12-13 — exactly
+  the kind of event this tool exists for
+
+**Next session:** Move repo out of iCloud-synced ~/Documents (see below),
+install Claude Code, run `/init`, then start Phase 2 (Next.js + Supabase).
+
+## Need-to-knows (gotchas captured along the way)
+- ⚠️ **iCloud:** repo currently in ~/Documents which syncs to iCloud. Move to
+  `~/dev/` BEFORE any `npm install` — iCloud cannot handle node_modules.
+- **GitHub token** (classic, repo scope) expires ~Sept 2026; keychain stores
+  it until then. Regenerate when pushes start failing, or switch to `gh` CLI.
+- **Mac Python:** always `python3` / `pip3`.
+- **Terminal habit:** paste one command at a time — stacked pastes get
+  swallowed by interactive prompts (learned via the git username incident).
+- **Browser quirk:** .py files may refuse to download from chat; rename
+  .py.txt workaround exists but won't matter once Claude Code edits files
+  directly.
