@@ -10,7 +10,7 @@ Guiding rule: the success metric is "I actually use this for my own garden."
 - [x] Claude API generates a Daily Garden Brief (`garden_brief.py`)
 
 ## 🔨 Phase 2 — The App (Next.js + Supabase)
-- [ ] Next.js project scaffold (App Router, TypeScript)
+- [x] Next.js project scaffold (App Router, TypeScript) — done June 10, 2026
 - [ ] Supabase: `gardens`, `beds`, `crops`, `plantings` tables
       (migrate the hardcoded JSON + CROPS dict into real schema)
 - [ ] Garden setup form (location, beds, crops, irrigation)
@@ -53,6 +53,15 @@ Phase 1 complete in one evening:
 
 **Next session:** Move repo out of iCloud-synced ~/Documents (see below),
 install Claude Code, run `/init`, then start Phase 2 (Next.js + Supabase).
+
+### Session 2 — June 10, 2026 ✅
+Phase 2 scaffold complete:
+- Moved repo from ~/Documents to ~/dev/desert-garden-ai (iCloud fix)
+- Installed Node.js v24 (nodejs.org LTS) and Homebrew
+- Scaffolded Next.js 15 (App Router, TypeScript, Tailwind, ESLint, src/ dir)
+- Confirmed dev server running at localhost:3000
+
+**Next session:** Set up Supabase project + schema (`gardens`, `beds`, `crops`, `plantings`), then migrate hardcoded garden profile data.
 
 ## Need-to-knows (gotchas captured along the way)
 - ⚠️ **iCloud:** repo currently in ~/Documents which syncs to iCloud. Move to

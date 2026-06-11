@@ -1,56 +1,36 @@
-# 🌵 Desert Garden AI
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-AI-powered garden assistant for high-heat desert climates. Generates daily care
-briefs from real weather data — built and battle-tested in St. George, UT
-(zone 9a, 110°F summers, no mercy).
+## Getting Started
 
-## Why
-
-Generic gardening apps give generic advice. They don't know that your cucumbers
-go bitter above 95°F, that a three-day heat spike means deep-watering *tonight*,
-or that your parsley is on borrowed time the moment June arrives. This project
-combines live forecast data (including ET₀ evapotranspiration — the actual
-water-loss rate of your plants) with structured crop knowledge and an LLM to
-produce specific, actionable daily guidance for a real garden.
-
-## How it works
-
-```
-Open-Meteo API ──┐
- (7-day forecast,│
-  ET₀, UV, wind) ├──► structured prompt ──► Claude API ──► Daily Garden Brief
-                 │
-Garden profile ──┘
- (beds, crops,
-  heat tolerances)
-```
-
-1. **Weather** — pulled from [Open-Meteo](https://open-meteo.com) (free, no key),
-   including `et0_fao_evapotranspiration`, the secret weapon for desert watering math.
-2. **Garden profile** — beds, crops, and irrigation setup, plus a structured
-   crop table with heat-stress thresholds and care notes.
-3. **Claude** — synthesizes both into a brief: weekly headline, watering plan,
-   per-bed actions, and one 10-minute task for tonight.
-
-## Quick start
+First, run the development server:
 
 ```bash
-pip install requests anthropic
-python garden_brief.py --dry-run        # no API key needed; shows data + prompt
-export ANTHROPIC_API_KEY="sk-ant-..."   # from console.anthropic.com
-python garden_brief.py                  # generates today's brief (~1¢/run)
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Roadmap
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-See [ROADMAP.md](ROADMAP.md). Short version: CLI script → Next.js app on
-Vercel with Supabase profiles → automated 6am brief delivery via n8n →
-planting calendars, pest photo ID, and multi-zone support.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Status
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-🌱 v0.1 — the brain works. The app is sprouting.
+## Learn More
 
-## License
+To learn more about Next.js, take a look at the following resources:
 
-MIT
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
